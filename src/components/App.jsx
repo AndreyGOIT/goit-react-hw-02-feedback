@@ -1,16 +1,19 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      Please leave feedback
-    </div>
-  );
-};
+import React, { Component } from 'react';
+import Feedback from './Feedback/Feedback';
+
+class App extends Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+  render() {
+    return (
+      <>
+        <Feedback />
+      </>
+    );
+  }
+}
+
+export default App;
