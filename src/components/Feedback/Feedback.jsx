@@ -9,18 +9,24 @@ class Feedback extends React.Component {
   };
 
   handleClickGood = () => {
-    this.setState({
-      good: 1,
+    this.setState(prevState => {
+      return {
+        good: prevState.good + 1,
+      };
     });
   };
   handleClickNeutral = () => {
-    this.setState({
-      neutral: 1,
+    this.setState(prevState => {
+      return {
+        neutral: prevState.neutral + 1,
+      };
     });
   };
   handleClickBad = () => {
-    this.setState({
-      bad: 1,
+    this.setState(prevState => {
+      return {
+        bad: this.state.bad + 1,
+      };
     });
   };
 
