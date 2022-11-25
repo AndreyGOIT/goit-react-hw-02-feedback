@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Statistics.module.css';
 
 class Statistics extends React.Component {
   state = {
@@ -9,12 +10,14 @@ class Statistics extends React.Component {
 
   render() {
     return (
-      <div className="Statistics">
-        <span className="Statistics__title">Statistics</span>
-        <div className="Statistics__items">
-          <p className="Statistics__item">Good:{this.state.good}</p>
-          <p className="Statistics__item">Neutral:{this.state.neutral}</p>
-          <p className="Statistics__item">Bad:{this.state.bad}</p>
+      <div className={styles.statistics}>
+        <span className={styles.statistics__title}>Statistics</span>
+        <div className={styles.statistics__items}>
+          <p className={styles.statistics__item}>Good: {this.state.good}</p>
+          <p className={styles.statistics__item}>
+            Neutral: {this.state.neutral}
+          </p>
+          <p className={styles.statistics__item}>Bad: {this.state.bad}</p>
         </div>
       </div>
     );

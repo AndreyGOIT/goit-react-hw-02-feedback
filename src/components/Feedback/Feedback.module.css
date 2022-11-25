@@ -1,0 +1,16 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.feedback__title {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.feedback__btns {
+  display: flex;
+  gap: 10px;
+}
