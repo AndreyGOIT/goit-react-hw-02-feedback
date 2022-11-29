@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Feedback.module.css';
+import Buttons from './Btns';
 
 class Feedback extends React.Component {
   static defaultProps = {
@@ -32,17 +33,11 @@ class Feedback extends React.Component {
       <>
         <div className={styles.feedback}>
           <span className={styles.feedback__title}>Please leave feedback</span>
-          <div className={styles.feedback__btns}>
-            <button type="button" onClick={this.handleClickGood}>
-              Good
-            </button>
-            <button type="button" onClick={this.handleClickNeutral}>
-              Neutral
-            </button>
-            <button type="button" onClick={this.handleClickBad}>
-              Bad
-            </button>
-          </div>
+          <Buttons
+            onHandleClickGood={this.handleClickGood}
+            onHandleClickNeutral={this.handleClickNeutral}
+            onHandleClickBad={this.handleClickBad}
+          />
         </div>
         <div className={styles.statistics}>
           <span className={styles.statistics__title}>Statistics</span>
