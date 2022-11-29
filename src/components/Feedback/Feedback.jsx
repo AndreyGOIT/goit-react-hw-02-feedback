@@ -2,32 +2,29 @@ import React from 'react';
 import styles from './Feedback.module.css';
 
 class Feedback extends React.Component {
+  static defaultProps = {
+    initialValue: 0,
+  };
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    good: this.props.initialValue,
+    neutral: this.props.initialValue,
+    bad: this.props.initialValue,
   };
 
   handleClickGood = () => {
-    this.setState(prevState => {
-      return {
-        good: prevState.good + 1,
-      };
-    });
+    this.setState(prevState => ({
+      good: prevState.good + 1,
+    }));
   };
   handleClickNeutral = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
+    this.setState(prevState => ({
+      neutral: prevState.neutral + 1,
+    }));
   };
   handleClickBad = () => {
-    this.setState(prevState => {
-      return {
-        bad: this.state.bad + 1,
-      };
-    });
+    this.setState(prevState => ({
+      bad: this.state.bad + 1,
+    }));
   };
 
   render() {

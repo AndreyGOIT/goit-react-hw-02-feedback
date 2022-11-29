@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Feedback />
+        <Feedback initialValue={0} />
         {/* <Statistics /> */}
       </>
     );
