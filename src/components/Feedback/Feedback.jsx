@@ -35,6 +35,12 @@ class Feedback extends React.Component {
     total += 1;
     positiveFeedBack = Math.round((this.state.good / total) * 100);
   };
+  countTotalFeedback = () => {
+    total += 1;
+  };
+  countPositiveFeedbackPercentage = () => {
+    positiveFeedBack = Math.round((this.state.good / total) * 100);
+  };
 
   render() {
     return (
