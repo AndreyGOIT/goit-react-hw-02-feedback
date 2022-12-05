@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Feedback from '../components/Feedback';
-// import Statistics from '../components/Statistics';
+import Statistics from '../components/Statistics';
 
 class App extends Component {
   state = {
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <>
         <Feedback />
-        {/* <Statistics /> */}
+        <Statistics state={this.state} />
       </>
     );
   }
