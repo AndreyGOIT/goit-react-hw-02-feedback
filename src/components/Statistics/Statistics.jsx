@@ -1,16 +1,18 @@
 import React from 'react';
 import styles from './Statistics.module.css';
 
-const Statistics = ({ state }) => {
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   <>
     <div className={styles.statistics}>
       <span className={styles.statistics__title}>Statistics</span>
       <div className={styles.statistics__items}>
-        <p className={styles.statistics__item}>Good: {state.good}</p>
-        <p className={styles.statistics__item}>Neutral: {state.neutral}</p>
-        <p className={styles.statistics__item}>Bad: {state.bad}</p>
-        <p className={styles.statistics__item}>Total: 0</p>
-        <p className={styles.statistics__item}>Positive feedback: 0 %</p>
+        <p className={styles.statistics__item}>Good: {good}</p>
+        <p className={styles.statistics__item}>Neutral: {neutral}</p>
+        <p className={styles.statistics__item}>Bad: {bad}</p>
+        <p className={styles.statistics__item}>Total: {total}</p>
+        <p className={styles.statistics__item}>
+          Positive feedback: {positivePercentage} %
+        </p>
       </div>
     </div>
   </>;
