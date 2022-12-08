@@ -1,8 +1,9 @@
 const buttonStyles = {
-  padding: '5px 5px',
+  padding: '7px 7px',
   borderRadius: 4,
-  backgroundColor: 'gray',
+  backgroundColor: 'white',
   color: 'black',
+  textTransform: 'capitalize',
 };
 
 export const Button = ({ children }) => {

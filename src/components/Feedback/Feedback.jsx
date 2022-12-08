@@ -1,24 +1,24 @@
-import React from 'react';
-import styles from './Feedback.module.css';
-import Buttons from './Btns';
+// import React, { Component } from 'react';
+// import styles from './Feedback.module.css';
+// import Buttons from './Btns';
 
-class Feedback extends React.Component {
-  onLeaveFeedback = name => {
-    this.setState(state => {
-      return { [name]: state[name] + 1 };
-    });
-  };
+// class Feedback extends Component {
+//   onLeaveFeedback = name => {
+//     this.setState(state => {
+//       return { [name]: state[name] + 1 };
+//     });
+//   };
 
-  render() {
-    return (
-      <>
-        <div className={styles.feedback}>
-          <span className={styles.feedback__title}>Please leave feedback</span>
-          <Buttons onLeaveFeedback={this.onLeaveFeedback} />
-        </div>
-      </>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <>
+//         <div className={styles.feedback}>
+//           <span className={styles.feedback__title}>Please leave feedback</span>
+//           <Buttons onLeaveFeedback={this.onLeaveFeedback} />
+//         </div>
+//       </>
+//     );
+//   }
+// }
 
-export default Feedback;
+// export default Feedback;

@@ -28,6 +28,7 @@ class App extends Component {
 
   render() {
     const totalRates = this.countTotalFeedback();
+    console.log(totalRates);
     return (
       <>
         {/* <Section title="Please leave feedback"> */}
