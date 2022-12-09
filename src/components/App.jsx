@@ -11,6 +11,7 @@ class App extends Component {
   };
 
   handleClick = event => {
+    console.log(event);
     const key = event.target.name;
     this.setState(prevState => {
       return { [key]: prevState[key] + 1 };
