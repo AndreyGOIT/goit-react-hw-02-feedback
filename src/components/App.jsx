@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 // import Feedback from '../components/Feedback';
 import Statistics from '../components/Statistics';
-import Buttons from './Feedback/Btns';
+// import Buttons from './Feedback/Btns';
 
 class App extends Component {
   state = {
@@ -34,13 +34,13 @@ class App extends Component {
     return (
       <>
         {/* <Section title="Please leave feedback"> */}
-        {/* <FeedbackOptions
+        <FeedbackOptions
           options={Object.keys(this.state)}
-          // onLeaveFeedback={this.handleClick}
-        ></FeedbackOptions> */}
+          onLeaveFeedback={this.handleClick}
+        ></FeedbackOptions>
         {/* <Feedback /> */}
         {/* </Section> */}
-        <Buttons onLeaveFeedback={this.handleClick} />
+        {/* <Buttons onLeaveFeedback={this.handleClick} /> */}
 
         {/* <Section title="Statistics"> */}
         {totalRates > 0 ? (
