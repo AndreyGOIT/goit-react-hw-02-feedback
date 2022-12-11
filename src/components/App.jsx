@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-// import Feedback from '../components/Feedback';
 import Statistics from '../components/Statistics';
-// import Buttons from './Feedback/Btns';
+import { Section } from './Section/Section';
+import { Notification } from './Notification/Notification';
 
 class App extends Component {
   state = {
@@ -33,29 +33,28 @@ class App extends Component {
     console.log(totalRates);
     return (
       <>
-        {/* <Section title="Please leave feedback"> */}
-        <FeedbackOptions
-          options={Object.keys(this.state)}
-          onLeaveFeedback={this.handleClick}
-        ></FeedbackOptions>
-        {/* <Feedback /> */}
-        {/* </Section> */}
-        {/* <Buttons onLeaveFeedback={this.handleClick} /> */}
+        <Section title="Please leave feedback">
+          <b>Please leave feedback</b>
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.handleClick}
+          ></FeedbackOptions>
+        </Section>
 
-        {/* <Section title="Statistics"> */}
-        {totalRates > 0 ? (
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
-          />
-        ) : (
-          <span>"There is no feedback"</span>
-          // <Notification message="There is no feedback" />
-        )}
-        {/* </Section> */}
+        <Section title="Statistics">
+          <b>Statistics</b>
+          {totalRates > 0 ? (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
+        </Section>
       </>
     );
   }

@@ -1,5 +1,5 @@
 const buttonStyles = {
-  padding: '7px 7px',
+  padding: '4px 7px',
   borderRadius: 4,
   backgroundColor: 'white',
   color: 'black',
